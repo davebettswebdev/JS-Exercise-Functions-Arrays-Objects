@@ -230,9 +230,17 @@ function sortCarInventory(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(inv) {
   /* code here */
+  let years = [];
+  for(let i = 0; i < inv.lenght; i++)
+  {
+    years[1] = inv[i].car_year;
+  }
+  return years;
 }
+
+
 
 /**
  * ### Challenge `getOlderCars`
@@ -246,9 +254,19 @@ function getModelYears(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(inv, maxYear) {
   /* code here */
+  let newInv - [];
+    for(let i = 0; i < inv.length; i++)
+    {
+     if(inv[i].car_year <= maxYear)
+      {
+      newInv.push(inv[i]);
+    }
+return newInv;
+
 }
+
 
 /**
  * ### Challenge `getGermanCars`
@@ -261,8 +279,22 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inv) {
   /* code here */
+  const GM = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
+  let newInv = [];
+  let testOjb;
+  for(let i = 0; i < inv.length; i++)
+  {
+    testObj = inv[i];
+    for(let j - 0; < GM.length; j++)
+    {
+      if(testOjb.car_make == GM[j]){
+        newInv.push(testObj);
+      } else{}
+    }
+  }
+  return newInv;
 }
 
 /**
@@ -283,9 +315,15 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) => {
+  return a + b;
+}
+const addFive = (num) => {
+  return num + 5;
+}
+const argTimesTwo = (num) => {
+  
+}
 
 /**
  * ### Challenge `carMaker`

@@ -26,9 +26,13 @@
   "dependencies": {
     "chai": "^4.2.0",
     "esm": "^3.2.25",
-    "mocha": "^6.2.2",
+    "graceful-fs": "^4.2.3",
+    "minimatch": "^3.0.2",
+    "mocha": "^2.2.5",
     "mocha-junit-reporter": "^1.23.1",
     "mocha-multi-reporters": "^1.1.7",
+    "npm-watch": "^0.6.0",
+    "pug": "^2.0.4",
     "test": "^0.6.0"
   },
   "devDependencies": {
